@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -37,26 +37,31 @@
 
 								
 								<script language="Javascript">
-		                      	<!--hide
+			<!--hide
 
-		                    	var password;
-			                    var pass="editit";
-		                     	password=prompt('Enter you Password here','');
+			var password;
+			var pass="editit";
+			password=prompt('Enter you Password here','');
 
-		                     	if(password==pass)
-		                       	alert('Correct Password, Click OK to Enter Website');
-			                    else
-			                    {
-			                    alert('Wrong Password, you will be returned to the Homepage!');
-			                  	window.location="https://e-tv.github.io/";
-			                    }
-			                    //-->
-			                    </script>
+			if(password==pass)
+			alert('Correct Password, Click OK to Enter Website');
+			else
+			{
+			    alert('Wrong Password, you will be returned to the Homepage!');
+				window.location="https://e-tv.github.io/";
+			}
+			//-->
+			</script>
 
 
-							<textarea name "content"></textarea>
-								
-
+							<meta charset="utf-8">
+                <title>CKEditor</title>
+                <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+						
+				<textarea name="editor1"></textarea>
+                <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script>
 								
 							
 
@@ -144,9 +149,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="ckeditor/ckeditor.js"></script>
-			<script>
-			CKEDITOR.replace("content");
+			<!--
+			<script language="Javascript">
+			
+			<!--hide
+
+			var password;
+			var pass="Test";
+			password=prompt('Enter you Password here',' ');
+
+			if(password==pass)
+			alert('Correct Password, Click OK to Enter Website');
+			else
+			{
+			    
+				window.location="https://e-tv.github.io/home/";
+			}
+			//-->
 			</script>
+			-->
+
 	</body>
 </html>
