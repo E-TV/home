@@ -56,3 +56,38 @@ input, button {
   border: 1px solid #5dfc8a;
   cursor: pointer;
 }
+
+
+.container {
+	position: relative;
+	width: center;
+	padding: relative;
+	background: #fff;
+}
+
+
+.container .main-div {
+	position: relative;
+	width: relative;
+	padding: relative;
+	background: #fff;
+	box-shadow: 0 5px 15px;
+	border: relative;
+	border-radius: 10px;
+}
+
+
+ .avatar {
+	height: 100;
+    }
+
+
+
+.name {
+
+  width: 20%;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 20px;
+  
+}
