@@ -1,29 +1,52 @@
 <html>
 <head>
-  <title>Firebase Login</title>
+  <title>Sign In</title>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
 </head>
 <body>
-
+<div class="container">
   <div id="login_div" class="main-div">
+  <h1>SIGN IN/SIGN UP </h1> 
+  <!--<img class="avatar" src="avatar.svg">-->
+<!--  <div class="signin">-->
     <h3>SIGN IN</h3>
     <input type="email" placeholder="Email..." id="email_field" />
-    <input class= "fas fa-lock" type="password" placeholder="Password..." id="password_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
 
     <button onclick="login()">Sign In</button>
-    <a href="newuser.html">
-    <button>Create Account</button>
-    </a>
+    <button onclick="Save()">Forgot Password?</button>
+   <!-- </div>-->
+  <!--  <div class="signup">-->
+    <h3>SIGN UP</h3>
+    
+        
+    <input type="email" placeholder="Email..." id="email2_field" />
+    <input type="password" placeholder="Password..." id="password2_field" />
+    
+    <button onclick="signup()">Sign Up</button>
+    
+   <!-- </div>-->
   </div>
 
   <div id="user_div" class="loggedin-div">
     <h3>Welcome User</h3>
-    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <p id="user_para">You're currently logged in.</p>
+    <button onclick="dash()">Go to Dashboard</button>
     <button onclick="logout()">Logout</button>
+    <button onclick="OK()">send verification token</button>
   </div>
-
+  
+  <div id="user_div" class="loggedin-div">
+    <h3>We've sent you a verfication email</h3>
+    <input type="text" placeholder="Name..." id="name_field" />
+    
+    <button onclick="OK()">OK</button>
+    
+    <p>You're now signed in,</p>
+  </div>
+</div>
 
 
   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
