@@ -118,7 +118,7 @@ user.sendEmailVerification().then(function() {
 
 
 function dash() {
-     window.location.href='index.html';
+     window.location.href='https://e-tv.github.io/index.html';
 }
 
 
