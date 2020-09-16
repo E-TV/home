@@ -1,4 +1,4 @@
-firebase.auth().onAuthStateChanged(function(user) {
+    firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
 
@@ -9,8 +9,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     if(user != null){
 
-      var email_id = user.email;
-      document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+      var email = user.email;
+      document.getElementById("user_para").innerHTML = "Welcome User : " + email;
 
     }
 
@@ -39,8 +39,14 @@ function login(){
 
     // ...
   });
-
+ 
 }
+
+
+
+
+
+
 
 function logout(){
   firebase.auth().signOut();
@@ -57,23 +63,14 @@ user.sendEmailVerification().then(function() {
 }
 
 
-function reset() {
-var auth = firebase.auth();
-var emailAddress = document.getElementById("email_field").value;
 
-auth.sendPasswordResetEmail(emailAddress).then(function() {
-  // Email sent.
-}).catch(function(error) {
-  // An error happened.
-});
-}
 
 
 function signup() {
 
-    var email = document.getElementById("email_field").value;
-    var password = document.getElementById("password_field").value;
-
+    var email = document.getElementById("email2_field").value;
+    var password = document.getElementById("password2_field").value;
+    
 
 
 
@@ -83,9 +80,31 @@ function signup() {
   var errorMessage = error.message;
   // ...
 });
+
+
+
 }
 
+function name() {
+
+var name = document.getElementById("name_field").value;
+var user = firebase.auth().currentUser;
+
+
+  user.updateProfile({
+  displayName: (name),
+}).then(function() {
+  // Update successful.
+}).catch(function(error) {
+  // An error happened.
+});
+}
+
+
+
 function OK() {
+
+
 
 var user = firebase.auth().currentUser;
 
@@ -94,6 +113,26 @@ user.sendEmailVerification().then(function() {
 }).catch(function(error) {
   // An error happened.
 });
-
 }
 
+
+
+function dash() {
+     window.location.href='index.html'
+}
+
+
+
+
+
+function Save() {
+
+var auth = firebase.auth();
+var emailAddress = ("email_field");
+
+auth.sendPasswordResetEmail(emailAddress).then(function() {
+  // Email sent.
+}).catch(function(error) {
+  // An error happened.
+});
+}
